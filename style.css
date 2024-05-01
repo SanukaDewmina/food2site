@@ -1,0 +1,187 @@
+/* Header section and reponsive header section styles and cart tab styles. */
+/* search icon class name=  .fa-magnifying-glass    | cart icon class name=   .fa-cart-shopping  */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+body{
+  width: 100%;
+  padding-bottom: 1000px;
+  background-color: rgb(0, 0, 0);
+
+}
+/* Header section styles */
+
+.header{
+  position: fixed;
+  width: 100%;
+  padding: 0 20px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.733);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left h1{
+  color:white;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+ul{
+  display: flex;
+  justify-content: space-between;
+}
+.header-middle{
+  width: 300px;
+}
+.header-middle ul li a{
+  color: white;
+  font-family: "Kanit", sans-serif;
+  text-decoration:none;
+  display: block;
+  margin: 0 10px;
+}
+.header-middle ul li a:hover,.fa-magnifying-glass:hover, .fa-cart-shopping:hover{
+color: rgb(255, 238, 0);
+}
+.header-right{
+  display: flex;
+  justify-content: space-between;
+}
+ .fa-magnifying-glass, .fa-cart-shopping{
+  color: white;
+  margin: 0 5px;
+}
+
+/* rESPONSIVE HEADER NAV STYLE. Close mark Icon clas name=  .fa-xmark */
+.responsive-header-nav{
+  width: 320px;
+  height: 100vh;
+  background-color: rgb(50, 156, 255);
+  display: none;
+}
+.responsive-nav-bar-top{
+  padding: 0 5px;
+  height: 10%;
+  display: flex;
+  justify-content:flex-end
+}
+.fa-xmark{
+  font-size: 1.5rem;
+}
+.responsive-nav-bar-middle{
+  height: 10%;
+}
+.responsive-nav-bar-bottom{
+  height: 60%;
+}
+#nav-respon-ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-respon-li{
+  width: 100%;
+  display: block;
+}
+.nav-respon-a{
+  color: white;
+  display: block;
+  padding: 10px 0;
+  background-color: blue;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom:15px;
+  transition: 0.75s;
+}
+.nav-respon-a:hover{
+  background-color: rgba(0, 0, 0, 0.589);
+}
+
+form{
+  margin: 0 auto;
+  width: 80%;
+  padding: 5px 5px;
+  border: 1px soilid black;
+  background-color: brown;
+}
+.fa-magnifying-glass{
+  color:white;
+  width: 20%;
+}
+
+form input{
+  width: 70%;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+input:focus{
+  border: white;
+}
+/* CART DEATAILS FORM. */
+.cartdeatails{
+  width: 320px;
+  background-color: rgba(0, 0, 0, 0.692);
+  position: fixed;
+  z-index: 100000;
+  top: 50px;
+  right: 0;
+  padding: 0 10px;
+  height: 300px;
+  border:1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  display: none
+  
+}
+.ttt{
+  color: white;
+}
+.cartdeatails.active{
+  display: flex;
+}
+#cart-main-text{
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.cart-sections-checkout-btn{
+  display: flex;
+  justify-content: center;
+}
+#cart-chk-btn{
+  padding: 8px 24px;
+  color: black;
+  background-color: yellow;
+  border-radius: 5px;
+  transition: 0.7s;
+  border: none;
+}
+#cart-chk-btn:hover{
+  background-color: rgb(189, 145, 3);
+}
+
+/* cart notifications */
+.cart-png{
+  position: relative;
+}
+#cart-notification-count{
+  position: absolute;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.50rem;
+  font-weight: bold;
+  padding: 4px 4px;
+  border-radius: 50%;
+  background-color: rgb(255, 0, 0);
+  top: -11px;
+  right: -3px;
+  display: none;
+ 
+}

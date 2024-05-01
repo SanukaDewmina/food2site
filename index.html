@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodCort</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="grid1and2.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="banner.css">
+  <script src="https://kit.fontawesome.com/3bd3df8ce1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Header section.logo/navbar and two icons(search & cart)  -->
+
+<div class="header">
+  <section class="header-left">
+  <h1>FOODCORT</h1>
+    
+  </section>
+  <section class="header-middle">
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">FOODS</a></li>
+      <li><a href="#">ABOUT US</a></li>
+    </ul>
+  </section>
+  <section class="header-right">
+    <div><i class="fa-solid fa-magnifying-glass"></i></div>
+    <div class="cart-png">
+      <i class="fa-solid fa-cart-shopping" onclick="cartformonoff();"></i>
+      <label id="cart-notification-count"> 12 </label>
+    </div>
+  </section>
+</div>
+
+<!-- Header section in responsive web type(row by row) -->
+
+<div class="responsive-header-nav">
+   <div class="responsive-nav-bar-top">
+      <i class="fa-solid fa-xmark"></i>
+   </div>
+   <div class="responsive-nav-bar-middle">
+    <form >
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" name="" id="">
+      
+    </form>
+     
+   </div>
+   <div class="responsive-nav-bar-bottom">
+    <ul id="nav-respon-ul">
+      <li class="nav-respon-li"> <a href="#" class="nav-respon-a">HOME</a> </li>
+      <li class="nav-respon-li"> <a href="#" class="nav-respon-a">FOOD</a> </li>
+      <li class="nav-respon-li"> <a href="#" class="nav-respon-a">ABOUTUS</a> </li>
+    </ul>
+   </div>
+</div>
+
+<!-- web page cart deatails tab and earch form(its not showing beacuse its display:none;)  -->
+
+<div class="cartdeatails" id="cartdetailform">
+
+   <div class="cart-sections"><h3 id="cart-main-text"><span class="ttt">Your Cart</span></h3></div>
+   <div class="cart-sections"><label id="itemnameandprice"><span class="ttt">Item</span></label></div>
+   <div class="cart-sections"><label id="itemqentity"><span class="ttt">Quentity</span></label></div>
+   <div class="cart-sections"><label id="itemtax"><span class="ttt">SERVICE CHARGE</span></label></div>
+   <div class="cart-sections"><label id="totalofitems"><span class="ttt">TOATAL</span></label></div>
+   <div class="cart-sections-checkout-btn"><button id="cart-chk-btn" onclick="allcartdataReset();">CHECKOUT</button></div>
+</div>
+
+<!-- Web page main banner.Banner text/banner img & banner deatails -->
+<div class="banner">
+  <div class="banner-text-content">
+    <h4  class="banner-text-01">Foodie Paradise</h4>
+    <h1 class="banner-text-02">Where Every Bite Tells a Story</h1>
+    <h5 class="banner-text-03">Enjoy Ultimate Food Experience with FoodCort.</h5>
+    <button class="banner-btn-01">BOOK A TABLE</button>
+  </div>
+
+</div>
+
+<!-- Main section one.(Fast food section.this is grid and they're 8 grid items here) -->
+<div class="main-grid-one">
+  <h1 class="grid-name">Fast Foods</h1>
+  <div class="grid-items-in-grid-one">
+    <div class="g-one-items">
+          <i class="fa-solid fa-heart"></i>
+          <div class="grid-fast-food-photo">
+            <img class="grid-fast-food-img" src="fast food/5.png" alt="" id="pizza-img">
+          </div>
+          <div class="grid-fast-food-deatails">
+            <div> <h2 class="fast-food-item-name">Italin Pizza</h2></div>
+            <div class="grid-fast-food-item-rates">
+              <i class="fa-solid fa-star"  onclick="rateclickd();"></i>
+              <i class="fa-solid fa-star"  onclick="rateclickd();"></i>
+              <i class="fa-solid fa-star"  onclick="rateclickd();"></i>
+              <i class="fa-solid fa-star"  onclick="rateclickd();"></i>
+              <i class="fa-solid fa-star"  onclick="rateclickd();"></i>
+            </div>
+            <div class="priceandcartbtn">
+                 <div><h6 id="grid-one-items-price">$12.00</h6></div>
+                 <div><button class="grid-one-item-addtocart-btn" onclick="clickgrid01('');">Add to cart</button></div>
+            </div>
+          </div>
+    </div>
+    <div class="g-one-items">
+      <i class="fa-solid fa-heart"></i>
+      <div class="grid-fast-food-photo">
+        <img class="grid-fast-food-img" src="fast food/1.png" alt="">
+      </div>
+      <div class="grid-fast-food-deatails">
+        <div> <h2 class="fast-food-item-name">Burger</h2></div>
+        <div class="grid-fast-food-item-rates">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="priceandcartbtn">
+             <div><h6 id="grid-one-items-price">$7.00</h6></div>
+             <div><button class="grid-one-item-addtocart-btn" onclick="clickgrid02('');">Add to cart</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="g-one-items">
+      <i class="fa-solid fa-heart"></i>
+      <div class="grid-fast-food-photo">
+        <img class="grid-fast-food-img" src="fast food/2.png" alt="">
+      </div>
+      <div class="grid-fast-food-deatails">
+        <div> <h2 class="fast-food-item-name">Chicken-Nugts</h2></div>
+        <div class="grid-fast-food-item-rates">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="priceandcartbtn">
+            <div><h6 id="grid-one-items-price">$10.00</h6></div>
+            <div><button class="grid-one-item-addtocart-btn" onclick="clickgrid03('');">Add to cart</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="g-one-items">
+    <i class="fa-solid fa-heart"></i>
+    <div class="grid-fast-food-photo">
+    <img class="grid-fast-food-img" src="fast food/3.png" alt="">
+    </div>
+    <div class="grid-fast-food-deatails">
+    <div> <h2 class="fast-food-item-name">Chicken-submarine</h2></div>
+    <div class="grid-fast-food-item-rates">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+    </div>
+    <div class="priceandcartbtn">
+        <div><h6 id="grid-one-items-price">$9.55</h6></div>
+        <div><button class="grid-one-item-addtocart-btn" onclick="clickgrid04('');">Add to cart</button></div>
+    </div>
+    </div>
+    </div>
+    <div class="g-one-items">
+      <i class="fa-solid fa-heart"></i>
+      <div class="grid-fast-food-photo">
+        <img class="grid-fast-food-img" src="fast food/4.png" alt="">
+      </div>
+      <div class="grid-fast-food-deatails">
+        <div> <h2 class="fast-food-item-name">Fries&ChikenWings</h2></div>
+        <div class="grid-fast-food-item-rates">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="priceandcartbtn">
+             <div><h6 id="grid-one-items-price">$5.99</h6></div>
+             <div><button class="grid-one-item-addtocart-btn" onclick="clickgrid05('');">Add to cart</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="g-one-items">
+      <i class="fa-solid fa-heart"></i>
+      <div class="grid-fast-food-photo">
+        <img class="grid-fast-food-img" src="fast food/5.png" alt="" id="pizza-img-2">
+      </div>
+      <div class="grid-fast-food-deatails">
+        <div> <h2 class="fast-food-item-name">Italin Pizza</h2></div>
+        <div class="grid-fast-food-item-rates">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="priceandcartbtn">
+            <div><h6 id="grid-one-items-price">$12.00</h6></div>
+            <div><button class="grid-one-item-addtocart-btn" onclick="clickgrid06('');">Add to cart</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="g-one-items">
+      <i class="fa-solid fa-heart"></i>
+      <div class="grid-fast-food-photo">
+        <img class="grid-fast-food-img" src="fast food/6.png" alt="">
+      </div>
+      <div class="grid-fast-food-deatails">
+        <div> <h2 class="fast-food-item-name">Egg Sandwitch</h2></div>
+        <div class="grid-fast-food-item-rates">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="priceandcartbtn">
+            <div><h6 id="grid-one-items-price">$4.00</h6></div>
+            <div><button class="grid-one-item-addtocart-btn" onclick="clickgrid07('');">Add to cart</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="g-one-items">
+    <i class="fa-solid fa-heart"></i>
+    <div class="grid-fast-food-photo">
+    <img class="grid-fast-food-img" src="fast food/7.png" alt="">
+    </div>
+    <div class="grid-fast-food-deatails">
+    <div> <h2 class="fast-food-item-name">Sushi</h2></div>
+    <div class="grid-fast-food-item-rates">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+    </div>
+    <div class="priceandcartbtn">
+        <div><h6 id="grid-one-items-price">$7.00</h6></div>
+        <div><button class="grid-one-item-addtocart-btn" onclick="clickgrid08('');">Add to cart</button></div>
+    </div>
+    </div>
+    </div>
+    <div class="g-one-items">
+      <i class="fa-solid fa-heart"></i>
+      <div class="grid-fast-food-photo">
+      <img class="grid-fast-food-img" src="fast food/8.png" alt="">
+      </div>
+      <div class="grid-fast-food-deatails">
+      <div> <h2 class="fast-food-item-name">Tacos</h2></div>
+      <div class="grid-fast-food-item-rates">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <div class="priceandcartbtn">
+          <div><h6 id="grid-one-items-price">$6.99</h6></div>
+          <div><button class="grid-one-item-addtocart-btn" onclick="clickgrid09('');">Add to cart</button></div>
+      </div>
+      </div>
+      </div>
+
+
+  </div>
+</div>
+<hr>
+
+<!-- Main section two( Food section.this is also grid.they're 6 grid items here) -->
+<div class="main-gird-two">
+  <h1 class="grid-name">Foods</h1>
+  <div class="grid-items-in-grid-two">
+      <div class="g-two-items">
+        <i class="fa-solid fa-heart"></i>
+        <div class="grid-two-food-photo">
+          <img class="grid-food-img" src="food/1.png" alt="" id="grid-two-pik-1">
+        </div>
+        <div class="grid-two-food-details">
+          <div> <h2 class="fast-food-item-name">Tasty food</h2></div>
+          <div class="grid-fast-food-item-rates">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="priceandcartbtn">
+            <div><h6 id="grid-one-items-price">$12.00</h6></div>
+            <div><button class="grid-one-item-addtocart-btn">Add to cart</button></div>
+       </div>
+
+        </div>
+
+
+
+      </div>
+      <div class="g-two-items">
+        <i class="fa-solid fa-heart"></i>
+        <div class="grid-two-food-photo">
+          <img class="grid-food-img" src="food/2.png" alt="" id="grid-two-pik-2">
+        </div>
+        <div class="grid-two-food-details">
+          <div> <h2 class="fast-food-item-name">Tasty food</h2></div>
+          <div class="grid-fast-food-item-rates">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="priceandcartbtn">
+            <div><h6 id="grid-one-items-price">$12.00</h6></div>
+            <div><button class="grid-one-item-addtocart-btn">Add to cart</button></div>
+       </div>
+
+        </div>
+
+
+
+      </div>
+      <div class="g-two-items">
+        <i class="fa-solid fa-heart"></i>
+        <div class="grid-two-food-photo">
+          <img class="grid-food-img" src="food/3.png" alt="">
+        </div>
+        <div class="grid-two-food-details">
+          <div> <h2 class="fast-food-item-name">Tasty food</h2></div>
+          <div class="grid-fast-food-item-rates">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="priceandcartbtn">
+            <div><h6 id="grid-one-items-price">$12.00</h6></div>
+            <div><button class="grid-one-item-addtocart-btn">Add to cart</button></div>
+       </div>
+
+        </div>
+
+
+
+      </div>
+      <div class="g-two-items">
+        <i class="fa-solid fa-heart"></i>
+        <div class="grid-two-food-photo">
+          <img class="grid-food-img" src="food/4.png" alt="">
+        </div>
+        <div class="grid-two-food-details">
+          <div> <h2 class="fast-food-item-name">Tasty food</h2></div>
+          <div class="grid-fast-food-item-rates">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="priceandcartbtn">
+            <div><h6 id="grid-one-items-price">$12.00</h6></div>
+            <div><button class="grid-one-item-addtocart-btn">Add to cart</button></div>
+       </div>
+
+        </div>
+
+
+
+      </div>
+      <div class="g-two-items">
+        <i class="fa-solid fa-heart"></i>
+        <div class="grid-two-food-photo">
+          <img class="grid-food-img" src="food/5.png" alt="">
+        </div>
+        <div class="grid-two-food-details">
+          <div> <h2 class="fast-food-item-name">Tasty food</h2></div>
+          <div class="grid-fast-food-item-rates">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="priceandcartbtn">
+            <div><h6 id="grid-one-items-price">$12.00</h6></div>
+            <div><button class="grid-one-item-addtocart-btn">Add to cart</button></div>
+       </div>
+
+        </div>
+
+
+
+      </div>
+      <div class="g-two-items">
+        <i class="fa-solid fa-heart"></i>
+        <div class="grid-two-food-photo">
+          <img class="grid-food-img" src="food/6.png" alt="" id="grid-two-pik-3">
+        </div>
+        <div class="grid-two-food-details">
+          <div> <h2 class="fast-food-item-name">Tasty food</h2></div>
+          <div class="grid-fast-food-item-rates">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="priceandcartbtn">
+            <div><h6 id="grid-one-items-price">$12.00</h6></div>
+            <div><button class="grid-one-item-addtocart-btn">Add to cart</button></div>
+       </div>
+
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+  </div>
+</div>
+
+ <script src="script.js"></script> 
+</body>
+</html>
